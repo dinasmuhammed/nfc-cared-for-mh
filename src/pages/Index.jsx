@@ -5,7 +5,6 @@ import AboutMe from '../components/AboutMe';
 import Portfolio from '../components/Portfolio';
 import SocialMedia from '../components/SocialMedia';
 import Consultation from '../components/Consultation';
-import DigitalBusinessCard from '../components/DigitalBusinessCard';
 import NFC from '../components/NFC';
 import Footer from '../components/Footer';
 
@@ -24,7 +23,6 @@ const Index = () => {
         </div>
         <SocialMedia />
         <Consultation />
-        <DigitalBusinessCard />
       </main>
       <Footer />
     </div>
