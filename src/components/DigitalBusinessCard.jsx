@@ -7,9 +7,9 @@ const DigitalBusinessCard = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    'https://media.licdn.com/dms/image/D4D22AQHNZLLXHxXBvA/feedshare-shrink_800/0/1709893878366?e=1712793600&v=beta&t=Ue5Pu_Oy2Aw0Zy-Gu_Ht0Uy9Aw2Zy-Gu_Ht0Uy9',
-    'https://media.licdn.com/dms/image/D4D22AQGXhWZOJZRwQA/feedshare-shrink_800/0/1709893878366?e=1712793600&v=beta&t=Ue5Pu_Oy2Aw0Zy-Gu_Ht0Uy9Aw2Zy-Gu_Ht0Uy9',
-    'https://media.licdn.com/dms/image/D4D22AQFXhWZOJZRwQA/feedshare-shrink_800/0/1709893878366?e=1712793600&v=beta&t=Ue5Pu_Oy2Aw0Zy-Gu_Ht0Uy9Aw2Zy-Gu_Ht0Uy9'
+    'https://picsum.photos/800/600?random=1',
+    'https://picsum.photos/800/600?random=2',
+    'https://picsum.photos/800/600?random=3'
   ];
 
   const nextImage = () => {
