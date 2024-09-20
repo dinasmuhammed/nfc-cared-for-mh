@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, Mail, Globe, MapPin } from 'lucide-react';
+import { Phone, Mail, Globe, MapPin, Smartphone } from 'lucide-react';
 
 const ContactInfo = () => {
   const contactDetails = [
@@ -39,7 +39,7 @@ END:VCARD`;
         <CardTitle className="text-2xl font-bold text-blue-600 dark:text-blue-400">Contact Information</CardTitle>
       </CardHeader>
       <CardContent>
-        <ul className="space-y-4">
+        <ul className="space-y-4 mb-6">
           {contactDetails.map(({ icon, label, value }) => (
             <li key={label} className="flex items-center space-x-3">
               {icon}
@@ -48,9 +48,15 @@ END:VCARD`;
             </li>
           ))}
         </ul>
-        <Button onClick={generateVCard} className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white">
-          Save Contact
-        </Button>
+        <div className="flex space-x-4">
+          <Button onClick={generateVCard} className="flex-1 bg-blue-600 hover:bg-blue-700 text-white">
+            Save Contact
+          </Button>
+          <Button onClick={() => alert('NFC sharing initiated')} className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white">
+            <Smartphone className="mr-2 h-5 w-5" />
+            Share via NFC
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );

@@ -6,6 +6,7 @@ import Portfolio from '../components/Portfolio';
 import SocialMedia from '../components/SocialMedia';
 import Consultation from '../components/Consultation';
 import DigitalBusinessCard from '../components/DigitalBusinessCard';
+import NFC from '../components/NFC';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -17,7 +18,10 @@ const Index = () => {
           <ContactInfo />
           <AboutMe />
         </div>
-        <Portfolio />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Portfolio />
+          <NFC />
+        </div>
         <SocialMedia />
         <Consultation />
         <DigitalBusinessCard />
