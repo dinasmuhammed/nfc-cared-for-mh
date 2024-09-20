@@ -1,28 +1,26 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Phone, Mail, Globe, MapPin } from 'lucide-react';
 
 const ContactInfo = () => {
-  const contactDetails = {
-    fullName: 'Muhammed Adnan',
-    jobTitle: 'Founder & Developer',
-    company: 'AD Web Comic Agency',
-    phone: '+91 9656778508',
-    email: 'adnanmuhammad4393@gmail.com',
-    website: 'AD Web Comic Agency Website',
-    address: 'Behind KMR Steels, Vazakkam Vettil, Ulleryi19, Kerala 673315',
-  };
+  const contactDetails = [
+    { icon: <Phone className="h-5 w-5" />, label: 'Phone', value: '+91 9656778508' },
+    { icon: <Mail className="h-5 w-5" />, label: 'Email', value: 'adnanmuhammad4393@gmail.com' },
+    { icon: <Globe className="h-5 w-5" />, label: 'Website', value: 'AD Web Comic Agency Website' },
+    { icon: <MapPin className="h-5 w-5" />, label: 'Address', value: 'Behind KMR Steels, Vazakkam Vettil, Ulleryi19, Kerala 673315' },
+  ];
 
   const generateVCard = () => {
     const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN:${contactDetails.fullName}
-TITLE:${contactDetails.jobTitle}
-ORG:${contactDetails.company}
-TEL:${contactDetails.phone}
-EMAIL:${contactDetails.email}
-URL:${contactDetails.website}
-ADR:;;${contactDetails.address};;;
+FN:Muhammed Adnan
+TITLE:Founder & Developer
+ORG:AD Web Comic Agency
+TEL:+91 9656778508
+EMAIL:adnanmuhammad4393@gmail.com
+URL:AD Web Comic Agency Website
+ADR:;;Behind KMR Steels, Vazakkam Vettil, Ulleryi19, Kerala 673315;;;
 END:VCARD`;
 
     const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
@@ -36,20 +34,21 @@ END:VCARD`;
   };
 
   return (
-    <Card id="contact" className="mb-8">
+    <Card id="contact" className="glass-effect">
       <CardHeader>
-        <CardTitle>Contact Information</CardTitle>
+        <CardTitle className="text-2xl font-bold text-blue-600 dark:text-blue-400">Contact Information</CardTitle>
       </CardHeader>
       <CardContent>
-        <ul className="space-y-2">
-          {Object.entries(contactDetails).map(([key, value]) => (
-            <li key={key} className="flex">
-              <span className="font-semibold w-24">{key.charAt(0).toUpperCase() + key.slice(1)}:</span>
+        <ul className="space-y-4">
+          {contactDetails.map(({ icon, label, value }) => (
+            <li key={label} className="flex items-center space-x-3">
+              {icon}
+              <span className="font-semibold">{label}:</span>
               <span>{value}</span>
             </li>
           ))}
         </ul>
-        <Button onClick={generateVCard} className="mt-4">
+        <Button onClick={generateVCard} className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white">
           Save Contact
         </Button>
       </CardContent>

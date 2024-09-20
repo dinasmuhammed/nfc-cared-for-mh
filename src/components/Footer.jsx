@@ -29,15 +29,15 @@ END:VCARD`;
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <p>© 2024 AD Web Comic Agency</p>
+            <p className="text-lg font-semibold">© 2024 AD Web Comic Agency</p>
           </div>
-          <div className="flex space-x-4">
-            <a href="https://adwebcomicagency.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">Website</a>
-            <a href="https://www.linkedin.com/in/muhammed-adnan" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">LinkedIn</a>
-            <a href="https://www.facebook.com/muhammedadnan" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">Facebook</a>
-            <a href="https://twitter.com/muhammedadnan" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">Twitter</a>
+          <div className="flex space-x-4 mb-4 md:mb-0">
+            <a href="https://adwebcomicagency.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300 transition-colors duration-200">Website</a>
+            <a href="https://www.linkedin.com/in/muhammed-adnan" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300 transition-colors duration-200">LinkedIn</a>
+            <a href="https://www.facebook.com/muhammedadnan" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300 transition-colors duration-200">Facebook</a>
+            <a href="https://twitter.com/muhammedadnan" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300 transition-colors duration-200">Twitter</a>
           </div>
-          <Button onClick={generateVCard} className="mt-4 md:mt-0 bg-blue-600 hover:bg-blue-700">
+          <Button onClick={generateVCard} className="bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-200">
             Save Contact
           </Button>
         </div>

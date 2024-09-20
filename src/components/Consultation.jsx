@@ -11,9 +11,7 @@ const Consultation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send this data to a server
     console.log('Form submitted:', { name, email, message });
-    // Reset form fields
     setName('');
     setEmail('');
     setMessage('');
@@ -29,12 +27,12 @@ const Consultation = () => {
   };
 
   return (
-    <Card id="consultation" className="mb-8">
+    <Card id="consultation" className="glass-effect">
       <CardHeader>
-        <CardTitle>Schedule a Consultation</CardTitle>
+        <CardTitle className="text-2xl font-bold text-blue-600 dark:text-blue-400">Schedule a Consultation</CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="mb-4">Interested in our services? Let's discuss how we can help you achieve your goals.</p>
+        <p className="mb-6 text-gray-700 dark:text-gray-300">Ready to elevate your digital presence? Let's discuss how we can help you achieve your goals and stand out in the digital landscape.</p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <Input
             type="text"
@@ -42,6 +40,7 @@ const Consultation = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
+            className="bg-white dark:bg-gray-800"
           />
           <Input
             type="email"
@@ -49,17 +48,19 @@ const Consultation = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            className="bg-white dark:bg-gray-800"
           />
           <Textarea
             placeholder="Your Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
+            className="bg-white dark:bg-gray-800"
           />
-          <div className="flex space-x-2">
-            <Button type="submit">Send Email</Button>
-            <Button type="button" onClick={openWhatsApp}>Message on WhatsApp</Button>
-            <Button type="button" onClick={openInstagram}>Message on Instagram</Button>
+          <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+            <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white flex-1">Send Email</Button>
+            <Button type="button" onClick={openWhatsApp} className="bg-green-600 hover:bg-green-700 text-white flex-1">WhatsApp</Button>
+            <Button type="button" onClick={openInstagram} className="bg-purple-600 hover:bg-purple-700 text-white flex-1">Instagram</Button>
           </div>
         </form>
       </CardContent>
