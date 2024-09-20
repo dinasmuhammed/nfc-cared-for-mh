@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-scroll';
 
 const Header = () => {
   return (
@@ -11,14 +10,12 @@ const Header = () => {
           <ul className="flex space-x-4">
             {['Contact', 'About', 'Portfolio', 'Social', 'Consultation'].map((item) => (
               <li key={item}>
-                <Link
-                  to={item.toLowerCase()}
-                  smooth={true}
-                  duration={500}
+                <a
+                  href={`#${item.toLowerCase()}`}
                   className="text-blue-500 hover:text-blue-700 cursor-pointer"
                 >
                   {item}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
