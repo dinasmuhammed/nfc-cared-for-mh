@@ -4,9 +4,9 @@ import { Facebook, Linkedin, Twitter } from 'lucide-react';
 
 const SocialMedia = () => {
   const socialLinks = [
-    { name: 'LinkedIn', icon: <Linkedin className="h-8 w-8" />, url: 'https://www.linkedin.com/in/muhammed-adnan' },
-    { name: 'Facebook', icon: <Facebook className="h-8 w-8" />, url: 'https://www.facebook.com/muhammedadnan' },
-    { name: 'Twitter', icon: <Twitter className="h-8 w-8" />, url: 'https://twitter.com/muhammedadnan' },
+    { name: 'LinkedIn', icon: <Linkedin className="h-8 w-8" />, url: 'https://www.linkedin.com/in/muhammedadnanvv/' },
+    { name: 'Facebook', icon: <Facebook className="h-8 w-8" />, url: 'https://www.facebook.com/profile.php?id=100084139741037' },
+    { name: 'Twitter', icon: <Twitter className="h-8 w-8" />, url: 'https://x.com/MuhammadAd93421' },
   ];
 
   return (
