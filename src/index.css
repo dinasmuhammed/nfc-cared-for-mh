@@ -5,13 +5,13 @@
 @layer base {
   :root {
     --background: 0 0% 0%; /* Black background */
-    --foreground: 40 100% 85%; /* Light gold text */
+    --foreground: 0 0% 100%; /* White text */
 
     --card: 10 10% 10%; /* Darker card background */
-    --card-foreground: 40 100% 85%; /* Light gold for card text */
+    --card-foreground: 0 0% 100%; /* White for card text */
 
     --popover: 10 10% 10%; /* Darker popover background */
-    --popover-foreground: 40 100% 85%; /* Light gold for popover text */
+    --popover-foreground: 0 0% 100%; /* White for popover text */
 
     --primary: 40 100% 60%; /* Gold for primary */
     --primary-foreground: 0 0% 100%; /* White for primary text */
@@ -20,7 +20,7 @@
     --secondary-foreground: 0 0% 100%; /* White for secondary text */
 
     --muted: 0 0% 20%; /* Muted dark color */
-    --muted-foreground: 40 100% 85%; /* Light gold for muted text */
+    --muted-foreground: 0 0% 100%; /* White for muted text */
 
     --accent: 40 100% 80%; /* Lighter gold for accents */
     --accent-foreground: 0 0% 100%; /* White for accent text */
@@ -37,13 +37,13 @@
 
   .dark {
     --background: 0 0% 0%; /* Black background for dark mode */
-    --foreground: 40 100% 85%; /* Light gold text for dark mode */
+    --foreground: 0 0% 100%; /* White text for dark mode */
 
     --card: 10 10% 10%; /* Darker card background for dark mode */
-    --card-foreground: 40 100% 85%; /* Light gold for card text */
+    --card-foreground: 0 0% 100%; /* White for card text */
 
     --popover: 10 10% 10%; /* Darker popover background for dark mode */
-    --popover-foreground: 40 100% 85%; /* Light gold for popover text */
+    --popover-foreground: 0 0% 100%; /* White for popover text */
 
     --primary: 40 100% 60%; /* Gold for primary in dark mode */
     --primary-foreground: 0 0% 100%; /* White for primary text in dark mode */
@@ -52,7 +52,7 @@
     --secondary-foreground: 0 0% 100%; /* White for secondary text in dark mode */
 
     --muted: 0 0% 20%; /* Muted dark color in dark mode */
-    --muted-foreground: 40 100% 85%; /* Light gold for muted text in dark mode */
+    --muted-foreground: 0 0% 100%; /* White for muted text in dark mode */
 
     --accent: 40 100% 80%; /* Lighter gold for accents in dark mode */
     --accent-foreground: 0 0% 100%; /* White for accent text in dark mode */
